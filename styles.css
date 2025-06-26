@@ -1,20 +1,117 @@
+/* Global styles */
 body {
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
 }
 
-h1 {
+.container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title-section {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.title-section h1 {
+  font-size: 4em;
+  font-weight: bold;
+  color: #fad73a;
+  line-height: 0.9;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  flex: 2;
+}
+
+.main-image {
+  max-width: 400px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.content-text {
+  max-width: 400px;
+}
+
+.content-text h2 {
+  font-size: 1.5em;
+  color: #fad73a;
+  margin-bottom: 10px;
+}
+
+.content-text p {
+  font-size: 1em;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.presenter-details {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  max-width: 200px;
+}
+
+.presenter-details p {
+  font-size: 1em;
+  color: #fad73a;
+  margin: 5px 0;
+}
+
+.presenter-details strong {
+  color: #fff;
+}
+
+.side-image {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  max-width: 200px;
+}
+
+.side-img {
+  width: 100%;
+  height: auto;
+}
+
+.search-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
   text-align: center;
-  color: #333;
+  z-index: 2;
 }
 
 #searchForm {
   display: flex;
+  justify-content: center;
   gap: 10px;
-  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
 }
 
 #searchInput,
@@ -23,6 +120,8 @@ h1 {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: #fff;
+  color: #000;
 }
 
 #searchForm button {
@@ -41,6 +140,7 @@ h1 {
 #userList {
   list-style: none;
   padding: 0;
+  margin-top: 150px; /* Space for search bar and content */
 }
 
 .user-item {
@@ -50,6 +150,7 @@ h1 {
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  color: #000;
 }
 
 .user-item:hover {
